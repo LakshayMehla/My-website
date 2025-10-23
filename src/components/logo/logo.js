@@ -13,7 +13,7 @@ const Logo = forwardRef(({ disabledLink = false, sx, ...other }, ref) => {
   const logo = (
     <Box
       component="img"
-      src="/logo/logo_single.svg"
+      src="logo/logo_single.svg"
       sx={{ 
         height: 36, 
         width: "auto",

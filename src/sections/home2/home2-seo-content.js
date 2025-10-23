@@ -144,7 +144,7 @@ const Home2SeoContent = () => {
                 integrated with Razorpay, reducing payment processing time by ~60%. Optimized MongoDB queries and adopted Cloudflare R2 for 
                 image storage, improving page load times by ~35% on booking flows.
               </Typography>
-              <Box component="img" src="/assets/illustrations/plane-divider.svg" width={1} my={2} />
+              <Box component="img" src="assets/illustrations/plane-divider.svg" width={1} my={2} />
               <Typography variant="body2">
                 <strong>Key Achievements & Experience:</strong>
                 <Box component="ul">

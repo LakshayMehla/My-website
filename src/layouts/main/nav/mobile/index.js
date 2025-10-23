@@ -40,7 +40,7 @@ export default function NavMobile({ data }) {
   return (
     <>
       <IconButton onClick={handleOpenMenu} sx={{ ml: 1 }}>
-        <SvgColor src="/assets/icons/navbar/ic_menu_item.svg" />
+        <SvgColor src="assets/icons/navbar/ic_menu_item.svg" />
       </IconButton>
 
       <Drawer

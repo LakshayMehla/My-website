@@ -30,11 +30,11 @@ I also built Retool dashboards for operations (bookings, users, system health) t
         ]}
         achievements="Implemented whitelabeling features and Excel exports for partner agencies, built comprehensive role-based dashboards"
         screenshots={[
-          "/assets/images/projects/flyzy/dashboard.png",
-          "/assets/images/projects/flyzy/booking.png",
-          "/assets/images/projects/flyzy/agent-portal.png",
-          "/assets/images/projects/flyzy/whitelabel.png",
-          "/assets/images/projects/flyzy/reports.png",
+          "assets/images/projects/flyzy/dashboard.png",
+          "assets/images/projects/flyzy/booking.png",
+          "assets/images/projects/flyzy/agent-portal.png",
+          "assets/images/projects/flyzy/whitelabel.png",
+          "assets/images/projects/flyzy/reports.png",
         ]}
         liveUrl="https://flyzygo.com/"
       />

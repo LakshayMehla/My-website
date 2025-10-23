@@ -30,11 +30,11 @@ Key technical implementations include direct checkout integration with Razorpay,
         ]}
         achievements="Reduced payment processing time by ~60%, improved page load times by ~35%, cut manual operational effort by ~80%"
         screenshots={[
-          "/assets/images/projects/directone/homepage.png",
-          "/assets/images/projects/directone/search.png",
-          "/assets/images/projects/directone/booking.png",
-          "/assets/images/projects/directone/payment.png",
-          "/assets/images/projects/directone/confirmation.png",
+          "assets/images/projects/directone/homepage.png",
+          "assets/images/projects/directone/search.png",
+          "assets/images/projects/directone/booking.png",
+          "assets/images/projects/directone/payment.png",
+          "assets/images/projects/directone/confirmation.png",
         ]}
         liveUrl="https://godirect.one/"
       />
