@@ -1,0 +1,1 @@
+export { default as HiddenH1 } from './hidden-h1'

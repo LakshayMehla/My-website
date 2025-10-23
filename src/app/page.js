@@ -1,0 +1,23 @@
+"use client";
+
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+
+import { HiddenH1 } from "src/components/hidden-h1";
+
+// Import with no SSR to avoid document reference errors
+const HomeContent = dynamic(() => import("../sections/home2/view/home2-view"), {
+  ssr: false,
+});
+
+export default function HomePage() {
+  return (
+    <>
+      {/* Main Content */}
+      <HiddenH1 text='Lakshay Mehla - Full Stack Developer Portfolio | React, Next.js, Node.js Developer' />
+      <Suspense fallback={<div>Loading...</div>}>
+        <HomeContent />
+      </Suspense>
+    </>
+  );
+}

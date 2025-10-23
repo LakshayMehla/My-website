@@ -1,0 +1,18 @@
+<svg width="200" height="40" viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Clean Typography Only -->
+  <text x="10" y="24" font-family="'SF Pro Display', 'Inter', 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="url(#logoGradient)">
+    Lakshay Mehla
+  </text>
+  
+  <!-- Professional Subtitle -->
+  <text x="10" y="38" font-family="'SF Pro Display', 'Inter', 'Segoe UI', Arial, sans-serif" font-size="10" font-weight="500" fill="#666" opacity="0.8" letter-spacing="0.5px">
+    FULL STACK DEVELOPER
+  </text>
+</svg>

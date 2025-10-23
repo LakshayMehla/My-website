@@ -1,0 +1,8 @@
+# Redirect corporate-travel to godirect
+/corporate-travel      https://godirect.one/        301
+/corporate-travel/     https://godirect.one/        301
+/corporate-travel/*    https://godirect.one/:splat  301
+
+
+# Catch-all rule for SPA routing
+/*    /index.html   200

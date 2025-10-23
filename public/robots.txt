@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Only allow indexing for flyzygo.com
+Host: https://flyzygo.com
+
+# Sitemap
+Sitemap: https://flyzygo.com/sitemap.xml
