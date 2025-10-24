@@ -10,10 +10,15 @@ import { RouterLink } from "src/routes/components";
 
 const Logo = forwardRef(({ disabledLink = false, sx, ...other }, ref) => {
   // -------------------------------------------------------
+  // Use absolute path that works with basePath configuration
+  const logoSrc = typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'production' 
+    ? '/My-website/logo/logo_single.svg' 
+    : '/logo/logo_single.svg';
+  
   const logo = (
     <Box
       component="img"
-      src="logo/logo_single.svg"
+      src={logoSrc}
       sx={{ 
         height: 36, 
         width: "auto",

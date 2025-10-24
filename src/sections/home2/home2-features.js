@@ -3,9 +3,9 @@ import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Unstable_Grid2";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 
 import { useResponsive } from "src/hooks/use-responsive";
+import { RouterLink } from "src/routes/components";
 
 import { pxToRem, responsiveFontSizes } from "src/theme/typography";
 
@@ -107,9 +107,9 @@ export default function Home2Features() {
                 justifyContent: "center",
               }}
             >
-              <Link
+              <RouterLink
                 href={project.link}
-                sx={{
+                style={{
                   textDecoration: "none",
                   color: "inherit",
                   width: "100%",
@@ -253,7 +253,7 @@ export default function Home2Features() {
                   ))}
                 </Stack>
                 </Box>
-              </Link>
+              </RouterLink>
             </Grid>
           ))}
         </Grid>
