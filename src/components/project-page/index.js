@@ -17,6 +17,7 @@ import IconButton from '@mui/material/IconButton';
 
 import { pxToRem, responsiveFontSizes } from 'src/theme/typography';
 import Iconify from 'src/components/iconify';
+import { getImagePath } from 'src/utils/assets';
 
 // ----------------------------------------------------------------------
 
@@ -173,7 +174,7 @@ export default function ProjectPage({
                   >
                     <Box
                       component="img"
-                      src={screenshot}
+                      src={getImagePath(screenshot)}
                       alt={`${title} screenshot ${index + 1}`}
                       sx={{
                         width: "100%",
@@ -355,7 +356,7 @@ export default function ProjectPage({
           {selectedImage && (
             <Box
               component="img"
-              src={selectedImage}
+              src={getImagePath(selectedImage)}
               alt="Full size screenshot"
               sx={{
                 maxWidth: '100%',

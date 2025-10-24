@@ -8,6 +8,7 @@ import { useResponsive } from "src/hooks/use-responsive";
 import { RouterLink } from "src/routes/components";
 
 import { pxToRem, responsiveFontSizes } from "src/theme/typography";
+import { getImagePath } from "src/utils/assets";
 
 // ----------------------------------------------------------------------
 
@@ -163,7 +164,7 @@ export default function Home2Features() {
                 >
                   <Box
                     component="img"
-                    src={project.image}
+                    src={getImagePath(project.image)}
                     alt={project.title}
                     sx={{ 
                       width: "100%", 
