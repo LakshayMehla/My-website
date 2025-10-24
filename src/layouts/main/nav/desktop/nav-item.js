@@ -24,6 +24,27 @@ export const NavItem = forwardRef(
     { title, path, open, event, active, hasChild, externalLink, subItem, showDot, ...other },
     ref
   ) => {
+    const handleClick = () => {
+      TrackEvent(event, path);
+      
+      // Handle hash navigation
+      if (path.startsWith('#')) {
+        const elementId = path.substring(1);
+        const element = document.getElementById(elementId);
+        
+        if (element) {
+          // If we're on the home page, just scroll to the element
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          // If we're not on the home page, navigate to home first then scroll
+          // Store the hash in sessionStorage to scroll after page load
+          sessionStorage.setItem('scrollToHash', elementId);
+          window.location.href = `/${path}`;
+        }
+        return; // Prevent default link behavior
+      }
+    };
+
     const renderContent = (
       <StyledNavItem
         disableRipple
@@ -33,7 +54,7 @@ export const NavItem = forwardRef(
         active={active}
         subItem={subItem}
         showDot={showDot}
-        onClick={() => TrackEvent(event, path)}
+        onClick={handleClick}
         {...other}
       >
         {title}
@@ -53,6 +74,12 @@ export const NavItem = forwardRef(
         </Link>
       );
     }
+
+    // For hash links, use the custom handler instead of RouterLink
+    if (path.startsWith('#')) {
+      return renderContent;
+    }
+
     function TrackEvent(e, p) {
       console.log("Track Event Working");
       // const currentPath = p;
@@ -76,6 +103,7 @@ export const NavItem = forwardRef(
         action: "click",
       });
     }
+    
     return (
       <Link component={RouterLink} href={path} color="text.secondary" underline="none">
         {renderContent}

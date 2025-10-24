@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
@@ -11,6 +11,9 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import IconButton from '@mui/material/IconButton';
 
 import { pxToRem, responsiveFontSizes } from 'src/theme/typography';
 import Iconify from 'src/components/iconify';
@@ -27,10 +30,23 @@ export default function ProjectPage({
   liveUrl, 
   githubUrl 
 }) {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [open, setOpen] = useState(false);
+
   // Update page title dynamically
   useEffect(() => {
     document.title = `${title} | Lakshay Mehla Portfolio`;
   }, [title]);
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedImage(null);
+  };
 
   return (
     <Box
@@ -121,10 +137,62 @@ export default function ProjectPage({
           </Stack>
         </Stack>
 
+        {/* Project Screenshots - Top Section */}
+        {screenshots.length > 0 && (
+          <Box sx={{ mb: 8 }}>
+            <Typography
+              variant="h3"
+              sx={{
+                mb: 4,
+                fontWeight: 600,
+                textAlign: "center",
+                color: "text.primary",
+              }}
+            >
+              Project Screenshots
+            </Typography>
+            <Grid container spacing={3}>
+              {screenshots.map((screenshot, index) => (
+                <Grid item xs={12} sm={6} md={4} key={index}>
+                  <Box
+                    onClick={() => handleImageClick(screenshot)}
+                    sx={{
+                      borderRadius: 3,
+                      overflow: "hidden",
+                      boxShadow: "0 12px 40px rgba(0,0,0,0.15)",
+                      transition: "all 0.3s ease",
+                      cursor: "pointer",
+                      "&:hover": {
+                        transform: "translateY(-8px)",
+                        boxShadow: "0 20px 60px rgba(0,0,0,0.25)",
+                        "& img": {
+                          transform: "scale(1.1)",
+                        },
+                      },
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      src={screenshot}
+                      alt={`${title} screenshot ${index + 1}`}
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        display: "block",
+                        objectFit: "contain",
+                        transition: "transform 0.3s ease",
+                      }}
+                    />
+                  </Box>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        )}
+
         {/* Project Details */}
         <Grid container spacing={6}>
-          {/* Left Column - Description & Technologies */}
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12}>
             <Stack spacing={4}>
               {/* Long Description */}
               <Box
@@ -234,85 +302,71 @@ export default function ProjectPage({
               )}
             </Stack>
           </Grid>
-
-          {/* Right Column - Screenshots */}
-          <Grid item xs={12} lg={6}>
-            <Box
-              sx={{
-                p: 4,
-                borderRadius: 4,
-                background: "linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)",
-                border: "1px solid rgba(102, 126, 234, 0.1)",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-              }}
-            >
-              <Typography
-                variant="h4"
-                sx={{
-                  mb: 3,
-                  fontWeight: 600,
-                  color: "text.primary",
-                }}
-              >
-                Project Screenshots
-              </Typography>
-              
-              {screenshots.length > 0 ? (
-                <Stack spacing={3}>
-                  {screenshots.map((screenshot, index) => (
-                    <Box
-                      key={index}
-                      sx={{
-                        borderRadius: 2,
-                        overflow: "hidden",
-                        boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-                        transition: "all 0.3s ease",
-                        "&:hover": {
-                          transform: "translateY(-4px)",
-                          boxShadow: "0 12px 35px rgba(0,0,0,0.2)",
-                        },
-                      }}
-                    >
-                      <Box
-                        component="img"
-                        src={screenshot}
-                        alt={`${title} screenshot ${index + 1}`}
-                        sx={{
-                          width: "100%",
-                          height: "auto",
-                          display: "block",
-                        }}
-                      />
-                    </Box>
-                  ))}
-                </Stack>
-              ) : (
-                <Box
-                  sx={{
-                    p: 6,
-                    textAlign: "center",
-                    borderRadius: 2,
-                    background: "rgba(102, 126, 234, 0.05)",
-                    border: "2px dashed rgba(102, 126, 234, 0.2)",
-                  }}
-                >
-                  <Iconify 
-                    icon="mdi:image-outline" 
-                    sx={{ 
-                      fontSize: 48, 
-                      color: "text.disabled",
-                      mb: 2 
-                    }} 
-                  />
-                  <Typography variant="body1" color="text.secondary">
-                    Screenshots will be added here
-                  </Typography>
-                </Box>
-              )}
-            </Box>
-          </Grid>
         </Grid>
       </Container>
+
+      {/* Image Modal */}
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        maxWidth="lg"
+        fullWidth
+        sx={{
+          '& .MuiDialog-paper': {
+            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            borderRadius: 2,
+            maxHeight: '90vh',
+          },
+        }}
+      >
+        <DialogContent
+          sx={{
+            p: 0,
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '60vh',
+          }}
+        >
+          <IconButton
+            onClick={handleClose}
+            sx={{
+              position: 'absolute',
+              top: 16,
+              right: 16,
+              color: 'white',
+              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+              backdropFilter: 'blur(10px)',
+              zIndex: 1,
+              width: 48,
+              height: 48,
+              border: '2px solid rgba(255, 255, 255, 0.3)',
+              '&:hover': {
+                backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                border: '2px solid rgba(255, 255, 255, 0.6)',
+                transform: 'scale(1.1)',
+              },
+            }}
+          >
+            <Iconify icon="mdi:close" sx={{ fontSize: 24 }} />
+          </IconButton>
+          
+          {selectedImage && (
+            <Box
+              component="img"
+              src={selectedImage}
+              alt="Full size screenshot"
+              sx={{
+                maxWidth: '100%',
+                maxHeight: '90vh',
+                objectFit: 'contain',
+                borderRadius: 1,
+              }}
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </Box>
   );
 }

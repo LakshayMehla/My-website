@@ -22,7 +22,7 @@ import { NavItem } from './nav-item';
 
 // ----------------------------------------------------------------------
 
-export default function NavList({ data }) {
+export default function NavList({ data, onClose }) {
   const active = useActiveLink(data.path, !!data.children);
 
   const [openMenu, setOpenMenu] = useState(false);
@@ -47,6 +47,7 @@ export default function NavList({ data }) {
         externalLink={data.path.includes('http')}
         //
         active={active}
+        onClose={onClose}
       />
 
       {!!data.children && (

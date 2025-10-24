@@ -18,7 +18,6 @@ import { bgBlur } from "src/theme/css";
 import Logo from "src/components/logo";
 import Iconify from "src/components/iconify";
 
-import NavMobile from "./nav/mobile";
 import NavDesktop from "./nav/desktop";
 import { HEADER } from "../config-layout";
 import { navConfig } from "./config-navigation";
@@ -45,6 +44,16 @@ export default function Header() {
 
   const handleEmailClick = () => {
     window.location.href = "mailto:mehlalakshay@gmail.com";
+  };
+
+  const handleResumeDownload = () => {
+    // Create a temporary link element to trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // You'll need to add your resume.pdf file to the public folder
+    link.download = 'Lakshay_Mehla_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -115,8 +124,55 @@ export default function Header() {
               </>
             )}
 
-            {/* Mobile Navigation */}
-            {!mdUp && <NavMobile data={navConfig} />}
+            {/* Download Resume Button - Desktop */}
+            {mdUp && (
+              <Button
+                variant="contained"
+                onClick={handleResumeDownload}
+                startIcon={<Iconify icon="mdi:download" />}
+                sx={{
+                  ml: 1,
+                  px: 2,
+                  py: 1,
+                  fontSize: '0.875rem',
+                  fontWeight: 600,
+                  borderRadius: 2,
+                  textTransform: 'none',
+                  boxShadow: 'none',
+                  '&:hover': {
+                    boxShadow: 2,
+                  },
+                }}
+              >
+                Resume
+              </Button>
+            )}
+
+            {/* Mobile Resume Button */}
+            {!mdUp && (
+              <Button
+                variant="contained"
+                size="small"
+                onClick={handleResumeDownload}
+                startIcon={<Iconify icon="mdi:download" width={16} />}
+                sx={{
+                  ml: 1,
+                  px: 1.5,
+                  py: 0.5,
+                  fontSize: '0.75rem',
+                  fontWeight: 600,
+                  borderRadius: 1.5,
+                  textTransform: 'none',
+                  boxShadow: 'none',
+                  minWidth: 'auto',
+                  '&:hover': {
+                    boxShadow: 2,
+                  },
+                }}
+              >
+                Resume
+              </Button>
+            )}
           </Stack>
         </Container>
       </Toolbar>

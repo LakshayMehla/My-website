@@ -24,15 +24,16 @@ Key features include automated workflow management, multi-step form processing w
           "Cloudflare",
           "Express",
           "Material UI",
+          "Firebase",
           "Payment Gateway Integration"
         ]}
         achievements="Reduced checkout time from ~3 minutes to under 1 minute through step reduction, improved validation, and telemetry-driven performance iterations"
         screenshots={[
-          "assets/images/projects/tryvisa/landing.png",
-          "assets/images/projects/tryvisa/application-form.png",
-          "assets/images/projects/tryvisa/checkout.png",
-          "assets/images/projects/tryvisa/status-tracking.png",
-          "assets/images/projects/tryvisa/dashboard.png",
+          "/assets/images/projects/tryvisa/11.png",
+          "/assets/images/projects/tryvisa/12.png",
+          "/assets/images/projects/tryvisa/13.png",
+          "/assets/images/projects/tryvisa/14.png",
+          "/assets/images/projects/tryvisa/15.png",
         ]}
         liveUrl="https://tryvisa.com/"
       />

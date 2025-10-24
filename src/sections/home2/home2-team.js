@@ -29,7 +29,7 @@ const SKILLS = [
   },
   {
     category: "Cloud & Services",
-    skills: ["Vercel", "Netlify", "Cloudflare R2/CDN", "Razorpay", "PhonePe", "GitHub Actions"],
+    skills: ["Vercel", "Netlify", "Cloudflare R2/CDN", "GitHub Actions"],
     color: "#FF9900"
   },
   {

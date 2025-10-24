@@ -14,25 +14,25 @@ import { pxToRem, responsiveFontSizes } from "src/theme/typography";
 const PROJECTS = [
   {
     title: "Flyzy Agent Platform",
-    description: "Agent platform with search, booking, ticketing, and account management. Built role-based dashboards and whitelabel customization",
-    image: "assets/images/projects/agent-platform.svg",
-    technologies: ["React", "Node.js", "Express", "PostgreSQL", "Material UI"],
-    achievements: "Implemented whitelabeling features and Excel exports for partner agencies",
+    description: "Agent platform with flight, hotel, and package booking. Features whitelabeling, markup customization, and comprehensive booking management",
+    image: "/assets/images/projects/flyzy/1.png",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Material UI", "Firebase", "Retool"],
+    achievements: "Implemented whitelabeling features with custom markup management and package booking functionality",
     link: "/projects/flyzy"
   },
   {
     title: "DirectOne Travel Platform",
-    description: "B2B travel platform with flight, hotel, package, and cab booking systems. Sole frontend owner with React/Next.js and Material UI",
-    image: "assets/images/projects/travel-platform.svg",
-    technologies: ["React", "Next.js", "Material UI", "Razorpay", "MongoDB"],
-    achievements: "Reduced payment processing time by ~60%, improved page load times by ~35%",
+    description: "B2B travel platform with flight, hotel, package, and cab booking. Features company policy management, booking limits, request system, and reimbursement workflows",
+    image: "/assets/images/projects/directone/6.png",
+    technologies: ["React", "Material UI", "Razorpay", "MongoDB", "Google Analytics", "Firebase", "OpenReplay", "Grafana", "Prometheus"],
+    achievements: "Implemented company policy management with booking limits and comprehensive reimbursement system with multi-level approvals",
     link: "/projects/directone"
   },
   {
     title: "TryVisa Application",
     description: "Visa application platform with streamlined checkout process. Sole developer who rebuilt entire application experience",
-    image: "assets/images/projects/visa-application.svg",
-    technologies: ["React", "Node.js", "MongoDB", "Vercel", "Cloudflare"],
+    image: "/assets/images/projects/tryvisa/11.png",
+    technologies: ["React", "Node.js", "MongoDB", "WebSockets", "Firebase", "Express", "Material UI", "Payment Gateway Integration"],
     achievements: "Reduced checkout time from ~3 minutes to under 1 minute",
     link: "/projects/tryvisa"
   },

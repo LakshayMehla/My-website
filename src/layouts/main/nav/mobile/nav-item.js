@@ -13,9 +13,32 @@ import Iconify from 'src/components/iconify';
 // ----------------------------------------------------------------------
 
 export const NavItem = forwardRef(
-  ({ title, path, icon, open, active, hasChild, externalLink, ...other }, ref) => {
+  ({ title, path, icon, open, active, hasChild, externalLink, onClose, ...other }, ref) => {
+    const handleClick = () => {
+      // Handle hash navigation
+      if (path.startsWith('#')) {
+        const elementId = path.substring(1);
+        const element = document.getElementById(elementId);
+        
+        if (element) {
+          // If we're on the home page, just scroll to the element
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          // If we're not on the home page, navigate to home first then scroll
+          // Store the hash in sessionStorage to scroll after page load
+          sessionStorage.setItem('scrollToHash', elementId);
+          window.location.href = `/${path}`;
+        }
+        // Close mobile menu if it's open
+        if (onClose) {
+          onClose();
+        }
+        return; // Prevent default link behavior
+      }
+    };
+
     const renderContent = (
-      <StyledNavItem ref={ref} open={open} active={active} {...other}>
+      <StyledNavItem ref={ref} open={open} active={active} onClick={handleClick} {...other}>
         <Box component="span" sx={{ mr: 2, display: 'inline-flex', width: 36 }}>
           {icon}
         </Box>
