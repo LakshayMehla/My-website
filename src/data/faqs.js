@@ -2,7 +2,7 @@ export const faqs = [
   {
     category: 'ALL',
     heading: 'What is your experience with B2B travel platforms?',
-    detail: 'I have 2.5+ years of experience building B2B travel platforms end-to-end. I\'ve been the sole frontend owner for Flyzy (flight/hotel/package/cab), DirectOne (agent platform), and TryVisa (visa) dashboards, improving performance, payments, automation, and observability.',
+    detail: 'I have 3 years of experience building and scaling B2B and B2C travel platforms. I led front-end architecture for Flyzy (corporate dashboards), DirectOne (agent management portal), and TryVisa (B2C visa automation), achieving measurable gains in performance, workflow automation, and payment integration.',
   },
   {
     category: 'ALL',

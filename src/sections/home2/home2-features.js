@@ -14,27 +14,27 @@ import { getImagePath } from "src/utils/assets";
 
 const PROJECTS = [
   {
-    title: "Flyzy Agent Platform",
-    description: "Agent platform with flight, hotel, and package booking. Features whitelabeling, markup customization, and comprehensive booking management",
+    title: "Flyzy Corporate Dashboard",
+    description: "B2B corporate travel platform handling flights, hotels, and packages. Features hierarchical team management, real-time booking analytics, and a dynamic travel policy engine with multi-level approval workflows.",
     image: "/assets/images/projects/flyzy/1.png",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Material UI", "Firebase", "Retool"],
-    achievements: "Implemented whitelabeling features with custom markup management and package booking functionality",
+    technologies: ["React", "Next.js", "Node.js", "Express", "MongoDB", "Razorpay", "Cloudflare R2", "Retool"],
+    achievements: "Engineered team analytics & policy engine; integrated Razorpay checkout with idempotent payment handling",
     link: "/projects/flyzy"
   },
   {
-    title: "DirectOne Travel Platform",
-    description: "B2B travel platform with flight, hotel, package, and cab booking. Features company policy management, booking limits, request system, and reimbursement workflows",
+    title: "DirectOne – Agent Portal",
+    description: "B2B travel agent portal covering search, booking, and account management. Features a whitelabeling utility for branded tickets and a dynamic pricing engine for agent markup/margin management.",
     image: "/assets/images/projects/directone/6.png",
-    technologies: ["React", "Material UI", "Razorpay", "MongoDB", "Google Analytics", "Firebase", "OpenReplay", "Grafana", "Prometheus"],
-    achievements: "Implemented company policy management with booking limits and comprehensive reimbursement system with multi-level approvals",
+    technologies: ["React", "Material UI", "Node.js", "MongoDB", "Google Analytics", "OpenReplay", "Grafana", "Prometheus", "n8n", "Make.com"],
+    achievements: "Built whitelabeling engine enabling agents to generate branded tickets with custom markups/margins",
     link: "/projects/directone"
   },
   {
-    title: "TryVisa Application",
-    description: "Visa application platform with streamlined checkout process. Sole developer who rebuilt entire application experience",
+    title: "TryVisa – Visa Booking",
+    description: "B2C visa application platform with a streamlined checkout experience. Architected and developed end-to-end as sole developer, focusing on UX simplification and conversion optimization.",
     image: "/assets/images/projects/tryvisa/11.png",
-    technologies: ["React", "Node.js", "MongoDB", "WebSockets", "Firebase", "Express", "Material UI", "Payment Gateway Integration"],
-    achievements: "Reduced checkout time from ~3 minutes to under 1 minute",
+    technologies: ["React", "Node.js", "MongoDB", "Express", "Firebase", "Material UI", "PhonePe"],
+    achievements: "Reduced average checkout time from ~3 minutes to under 1 minute via step reduction and telemetry-driven iterations",
     link: "/projects/tryvisa"
   },
 ];

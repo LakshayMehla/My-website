@@ -7,23 +7,23 @@ import Iconify from "src/components/iconify";
 const faqs = [
   {
     question: "What technologies do you specialize in?",
-    answer: "I specialize in React, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, and modern web technologies. I have extensive experience building B2B platforms and full-stack applications."
+    answer: "I specialize in React, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, Redis, Firestore, and Firebase Realtime Database. I have extensive experience building B2B and B2C platforms using TypeScript, Material UI, and Tailwind CSS."
   },
   {
     question: "How many years of experience do you have?",
-    answer: "I have 2.5+ years of professional experience as a Full Stack Developer, with a track record of being promoted from SDE-1 to SDE-2 to Lead based on delivery, reliability, and code quality."
+    answer: "I have 3 years of professional experience as a Full Stack Developer at Flyzy, promoted from SDE-1 to SDE-2 based on delivery, reliability, and code quality."
   },
   {
     question: "What types of projects have you worked on?",
-    answer: "I've worked on B2B travel platforms including flight/hotel/package booking systems, agent platforms, visa applications, employee reimbursement systems, and monitoring dashboards."
+    answer: "I've worked on B2B corporate travel dashboards (Flyzy), B2B travel agent portals (DirectOne), and a B2C visa booking platform (TryVisa). I've also built ops automation workflows, internal Retool dashboards, and payment integrations."
   },
   {
     question: "Do you work with cloud services?",
-    answer: "Yes, I have experience with Vercel, Netlify, Cloudflare R2/CDN, and various cloud services for deployment, storage, and content delivery."
+    answer: "Yes — Firebase Hosting/Functions/Scheduler, Cloudflare R2/CDN, and GitHub Actions. I also have hands-on experience with payment gateways (Razorpay, PhonePe) and observability tools (Grafana, Prometheus, Loki)."
   },
   {
     question: "What's your approach to project management?",
-    answer: "I use tools like ClickUp and Jira for project management, and I focus on delivering reliable, scalable solutions with proper monitoring and analytics integration."
+    answer: "I use ClickUp and Jira for project management, and I focus on delivering reliable, scalable solutions with proper monitoring, analytics, and automation built in from the start."
   }
 ];
 

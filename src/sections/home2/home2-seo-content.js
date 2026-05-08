@@ -108,14 +108,14 @@ const Home2SeoContent = () => {
             </Stack>
 
             <Typography sx={{ textAlign: "center" }} variant="body1" mb={-2}>
-              Lead Full Stack Developer with 2.5+ years delivering B2B travel platforms{" "}
+              Full Stack Developer (SDE-2) with 3 years of experience building and scaling B2B & B2C travel platforms{" "}
             </Typography>
             <Typography variant="body2" sx={{ textAlign: "center" }}>
               I'm a{" "}
               <Box component="span" fontWeight="bold">
-                Lead Full Stack Developer
+                Full Stack Developer (SDE-2)
               </Box>
-              {" "}with 2.5+ years of experience delivering B2B travel platforms end-to-end across React/Next.js, Node.js/Express, and MongoDB/PostgreSQL. Promoted from SDE-1 → SDE-2 → Lead based on delivery, reliability, and code quality. I've built and owned the frontend for Flyzy (flight/hotel/package/cab), DirectOne (agent platform), and TryVisa (visa) dashboards, improving performance, payments, automation, and observability.
+              {" "}with 3 years of experience building and scaling B2B and B2C travel platforms using React/Next.js, Node.js/Express, and MongoDB. Promoted from SDE-1 → SDE-2 at Flyzy based on delivery, reliability, and code quality. I've led front-end architecture for Flyzy (corporate dashboards), DirectOne (agent management), and TryVisa (visa automation), achieving measurable gains in performance, workflow automation, and payment integration. Currently pursuing an MBA in Business Analytics to deepen expertise in product strategy and data-driven decision-making.
               {!showMore && (
                 <Button
                   onClick={handleToggle}
@@ -138,53 +138,45 @@ const Home2SeoContent = () => {
               }}
             >
               <Typography variant="body2">
-                <strong>Current Role - Lead Full Stack Developer (Apr 2025 – Present):</strong><br/>
-                Sole frontend owner for Flyzy dashboards across flights, hotels, packages, and cabs using React/Next.js and Material UI. 
-                Implemented Google Analytics and OpenReplay session replay to diagnose UX issues and improve funnels. Built direct checkout 
-                integrated with Razorpay, reducing payment processing time by ~60%. Optimized MongoDB queries and adopted Cloudflare R2 for 
-                image storage, improving page load times by ~35% on booking flows.
+                <strong>Current Role – SDE-2, Full Stack Developer @ Flyzy (Apr 2025 – Present):</strong><br/>
+                Primary frontend owner and full stack contributor for the Flyzy Corporate Dashboard (B2B travel platform) handling flights, hotels, and packages using React/Next.js and Material UI.
+                Engineered a hierarchical team management module with real-time booking analytics and a dynamic travel policy engine — allowing corporate admins to set automated booking limits, manage compliance, and process limit-increase requests via multi-level approval workflows.
+                Optimized MongoDB queries, migrated asset storage to Cloudflare R2, and integrated direct Razorpay checkout with idempotent payment handling, reducing transaction failures and accelerating load times.
               </Typography>
               <Box component="img" src="assets/illustrations/plane-divider.svg" width={1} my={2} />
               <Typography variant="body2">
                 <strong>Key Achievements & Experience:</strong>
                 <Box component="ul">
                   <Box component="li">
-                    <strong>SDE-2 (Jan 2024 – Mar 2025):</strong> Sole frontend developer for DirectOne agent platform with search, booking, ticketing, and account management
+                    <strong>SDE-1 (Apr 2023 – Mar 2025):</strong> Led end-to-end frontend for DirectOne (B2B agent portal) — search, booking, whitelabeling & branded ticket generation, and dynamic markup/margin engine
                   </Box>
                   <Box component="li">
-                    <strong>SDE-1 (Apr 2023 – Dec 2023):</strong> Built first version of Flyzy's booking/pricing platform and dashboards as sole frontend developer
+                    <strong>TryVisa (B2C):</strong> Architected and developed a consumer-facing visa application platform from scratch, reducing checkout time from ~3 minutes to under 1 minute
                   </Box>
                   <Box component="li">
-                    <strong>Product Ownership:</strong> Independently built complete frontends for flight, hotel, and package booking systems
+                    <strong>Workflow Automation:</strong> Built critical ops workflows and alert systems using n8n and Make.com, cutting manual support intervention by ~80%
                   </Box>
                   <Box component="li">
-                    <strong>Performance Optimization:</strong> Reduced checkout time from ~3 minutes to under 1 minute for TryVisa application
+                    <strong>Internal Tooling:</strong> Developed Retool dashboards to monitor system health, user behavior, and bookings, significantly improving incident response times
                   </Box>
                   <Box component="li">
-                    <strong>Automation:</strong> Automated workflows and alerts with n8n and Make.com, cutting manual operational effort by ~80%
+                    <strong>Payment Integration:</strong> Integrated Razorpay and PhonePe with idempotent payment handling to reduce transaction failures
                   </Box>
                   <Box component="li">
-                    <strong>Monitoring:</strong> Implemented comprehensive monitoring with Grafana, Prometheus, and Loki for system observability
+                    <strong>Monitoring:</strong> Implemented comprehensive observability with Grafana, Prometheus, Loki, Google Analytics, and OpenReplay
                   </Box>
                   <Box component="li">
-                    <strong>Payment Integration:</strong> Built robust payment systems with Razorpay and PhonePe integration
+                    <strong>Cloud & Infrastructure:</strong> Firebase Hosting/Functions/Scheduler, Cloudflare R2/CDN, GitHub Actions
                   </Box>
                   <Box component="li">
-                    <strong>Cloud Infrastructure:</strong> Experience with Vercel, Netlify, Cloudflare R2/CDN, and GitHub Actions
-                  </Box>
-                  <Box component="li">
-                    <strong>Database Expertise:</strong> MongoDB, PostgreSQL, Redis, MySQL, and SQLite
-                  </Box>
-                  <Box component="li">
-                    <strong>Education:</strong> Currently pursuing MBA in Business Analytics from Chandigarh University (Online)
+                    <strong>Education:</strong> Currently pursuing MBA in Business Analytics from Chandigarh University (Online); B.Tech from SJPMIIT (2018–2022)
                   </Box>
                 </Box>
               </Typography>
               <Typography variant="body2">
-                I'm passionate about building scalable B2B platforms that solve real-world problems in the travel industry. 
-                My experience spans the entire development lifecycle, from initial concept to production deployment, with a focus 
-                on performance, reliability, and user experience. I'm always excited to take on new challenges and contribute 
-                to innovative solutions that drive business growth.
+                I'm passionate about building scalable platforms that solve real-world problems in the travel industry.
+                My experience spans the entire development lifecycle — from initial concept to production deployment — with a strong focus
+                on performance, reliability, and user experience.
                 <Button
                   onClick={handleToggle}
                   color="warning"

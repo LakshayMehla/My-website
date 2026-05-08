@@ -16,7 +16,7 @@ import LottieAnimation from "./lottie";
 
 export default function Home2Hero() {
   const [typeEffect] = useTypewriter({
-    words: ["Full Stack Developer", "React/Next.js Expert", "Node.js Specialist", "B2B Platform Builder"],
+    words: ["Full Stack Developer", "React/Next.js Expert", "Node.js Specialist", "B2B Platform Builder", "SDE-2 @ Flyzy"],
     loop: {},
     typeSpeed: 140,
     deleteSpeed: 60,
@@ -136,9 +136,9 @@ export default function Home2Hero() {
               textShadow: "0 2px 4px rgba(0,0,0,0.1)",
             }}
           >
-            Full Stack Developer with 2.5+ years delivering B2B travel platforms end-to-end. 
-            Built and owned frontend for Flyzy, DirectOne, and TryVisa dashboards, improving performance, 
-            payments, automation, and observability.
+            Full Stack Developer with 3 years of experience building and scaling B2B and B2C travel platforms.
+            Led front-end architecture for Flyzy (corporate dashboards), DirectOne (agent management), and TryVisa (visa automation),
+            achieving measurable gains in performance, workflow automation, and payment integration.
           </Typography>
 
           <Stack

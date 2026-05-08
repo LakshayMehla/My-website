@@ -13,23 +13,23 @@ import { varFade, MotionViewport } from "src/components/animate";
 
 const SKILLS = [
   {
-    category: "Frameworks & Libraries",
-    skills: ["React", "Next.js", "Node.js", "Express.js", "Material UI", "Tailwind CSS"],
-    color: "#61DAFB"
-  },
-  {
     category: "Languages",
     skills: ["JavaScript", "TypeScript", "HTML", "CSS", "SQL"],
     color: "#68A063"
   },
   {
+    category: "Frameworks & Libraries",
+    skills: ["React", "Next.js", "Node.js", "Express.js", "Material UI", "Tailwind CSS"],
+    color: "#61DAFB"
+  },
+  {
     category: "Databases & Caching",
-    skills: ["MongoDB", "PostgreSQL", "Redis", "MySQL", "SQLite"],
+    skills: ["MongoDB", "PostgreSQL", "Redis", "Firestore", "Firebase Realtime DB"],
     color: "#336791"
   },
   {
     category: "Cloud & Services",
-    skills: ["Vercel", "Netlify", "Cloudflare R2/CDN", "GitHub Actions"],
+    skills: ["Firebase Hosting/Functions", "Cloudflare R2/CDN", "Razorpay", "PhonePe", "GitHub Actions"],
     color: "#FF9900"
   },
   {
@@ -39,7 +39,7 @@ const SKILLS = [
   },
   {
     category: "Tools & Platforms",
-    skills: ["Retool", "n8n", "Make.com", "Postman", "Docker", "Git", "Figma", "VS Code", "Cursor"],
+    skills: ["Retool", "n8n", "Make.com", "Postman", "Docker", "Git", "Figma", "ClickUp", "Jira"],
     color: "#8B5CF6"
   }
 ];
